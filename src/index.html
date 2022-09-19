@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PokeFinder!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section class="hero is-small is-primary has-text-centered">
+      <div class="hero-body">
+        <p class="title">Welcome to the PokeFinder!</p>
+        <p class="subtitle">All Pokemon to your liking</p>
+      </div>
+    </section>
+    <div class="container">
+      <section class="section">
+        <h1 class="title">PokeFinder!</h1>
+        <h2 class="subtitle">
+          Go ahead and enter the Pokemon's name or a number between 1 and 898.
+        </h2>
+        <input
+          id="search"
+          class="input is-primary is-large"
+          type="text"
+          placeholder="Enter Pokemon or number"
+          required class="txt--uppercase"
+          oninput="this.value = this.value.toLowerCase()"
+        >
+        <div class="mt-4">
+          <button id="submit" class="button is-large">Find Pokemon!</button>
+        </div>
+        <div id= "dropdown" class="dropdown is-hoverable mt-4">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+      <span>Poke Stats
+      </span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      <a id = "characterName"  class="dropdown-item">
+       Name :
+      </a>
+      <a id = "characterType"  class="dropdown-item">
+        Type :
+      </a>
+      <a id = "characterAbilities" class="dropdown-item">
+       Abilities : 
+      </a>
+      <a id = "characterHeight" class="dropdown-item">
+       Height : 
+      </a>
+    </div>
+  </div>
+</div>
+      </section>
+      <section class="section">
+        <h1 class="title">Results</h1>
+        <h2 class="subtitle">Your pokemon will appear below:</h2>
+        <div id="imageholder" class="img-with-txt">
+          <figure>
+          <img
+            src="https://oyster.ignimgs.com/mediawiki/apis.ign.com/pokemon-blue-version/d/d4/Charmander.gif?width=325
+            alt="Charmander"
+            <figcaption id="characterId">
+              
+            </figcaption>
+        </figure>
+        </div>
+      </section>
+    </div>
+    <script src="/script.js" defer></script>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDHF2MjLwg0CQbS7mx37B0RrFnwn0BG4u8",
+    authDomain: "pokefinder-3fbaa.firebaseapp.com",
+    projectId: "pokefinder-3fbaa",
+    storageBucket: "pokefinder-3fbaa.appspot.com",
+    messagingSenderId: "1013308706656",
+    appId: "1:1013308706656:web:e337c61434ef430d5dd805",
+    measurementId: "G-ML6TLHPNYK"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+  </body>
+</html>
