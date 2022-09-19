@@ -1,0 +1,15 @@
+#imageholder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#imageholder img {
+  height: 250px;
+  margin-bottom: 30px;
+}
+
+#submit{
+  display: flex;
+  justify-content: flex-start;
+}
