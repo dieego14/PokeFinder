@@ -1,4 +1,4 @@
 # PokeFinder
-Pokemon character and stats generator
+## Pokemon character and stats generator
 
-Enter your desired Pokemon to view its sprite and stats!
+### Enter your desired Pokemon to view its sprite and stats!
